@@ -1,4 +1,9 @@
 
+/* Don't forget to call wiringPiSetup() in main function
+ * Compile with -lwiringPi -wiringPiDev flags
+ */
+
+
 #ifndef temp_humidity_DHT11
 #define temp_humidity_DHT11
 

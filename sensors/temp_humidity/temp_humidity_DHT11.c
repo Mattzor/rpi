@@ -1,5 +1,7 @@
-
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdint.h>
+#include <wiringPi.h>
 #include "temp_humidity_DHT11.h"
 
 
@@ -42,8 +44,10 @@ void read_dht11_data(int dht11_data[])
             j++;
         }
     }
+    /* Useless right now */
     if((j >= 40) && (dht11_data[4] == ((dht11_data[0] + dht11_data[1] + dht11_data[2] + dht11_data[3]) & 0xFF))){
-        dht11_data[2] = dht11_data[2] * 9. / 5. + 32;
-
+        f = dht11_data[2] * 9. / 5. + 32;
     }
+
+
 }
